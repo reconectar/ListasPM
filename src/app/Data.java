@@ -30,7 +30,7 @@ public class Data {
 
 	public void proximoDia() {
 		if ((this.mes >= 1) && (this.mes <= 12)) {
-			if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+			if (this.mes == 1 || this.mes == 3 || this.mes == 5 || this.mes == 7 || this.mes == 8 || this.mes == 10 || this.mes == 12) {
 				if(mes == 12) {
 					if (this.dia < 31) {
 						this.dia++;
