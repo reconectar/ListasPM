@@ -50,7 +50,6 @@ class DataTest {
 	@Test
 	public void testDiaSemana() {
 		System.out.println(testeSemana.diaDaSemana());
-		assertEquals("Quinta-feira", testeSemana.diaDaSemana());
 		testeSemana.diaDaSemana().equals("Quinta-feira");
 	}
 }
