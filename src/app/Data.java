@@ -98,14 +98,72 @@ public class Data {
 	}
 
 	public String diaDaSemana() {
+		int a, b, c = 0, d, resultado;
+		a = this.ano - 1900;
+		b = a/4;
+		if(this.eAnoBissexto()&&this.dia<=29&&this.mes<=2) {
+			b--;			
+		}
+		switch(this.mes) {
+		case 1:
+			c = 0;
+			break;
+		case 2:
+			c = 3;
+			break;
+		case 3:
+			c = 3;
+			break;
+		case 4:
+			c = 6;
+			break;
+		case 5:
+			c = 1;
+			break;
+		case 6:
+			c = 4;
+			break;
+		case 7:
+			c = 6;
+			break;
+		case 8:
+			c = 2;
+			break;
+		case 9:
+			c = 5;
+			break;
+		case 10:
+			c = 0;
+			break;
+		case 11:
+			c = 3;
+			break;
+		case 12:
+			c = 5;
+			break;
+		}
 		
-		return "Segunda-feira";
-//		return "Terça-feira";
-//		return "Quarta-feira";
-//		return "Quinta-feira";
-//		return "Sexta-feira";
-//		return "Sábado";
-//		return "Domingo";
+		d = this.dia--;		
+		resultado = (a + b + c + d)%7;
+		resultado--;
+		
+		switch(resultado) {
+		case 0:
+			return "Segunda-feira";
+		case 1:
+			return "Terça-feira";
+		case 2:
+			return "Quarta-feira";
+		case 3:
+			return "Quinta-feira";
+		case 4:
+			return "Sexta-feira";
+		case 5:
+			return "Sábado";
+		case 6:
+			return "Domingo";
+		}
+		return "Erro";
 	}
 
 	public boolean eAnoBissexto() {
