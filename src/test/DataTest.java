@@ -49,7 +49,11 @@ class DataTest {
 	
 	@Test
 	public void testDiaSemana() {
-		System.out.println(testeSemana.diaDaSemana());
 		testeSemana.diaDaSemana().equals("Quinta-feira");
+	}
+	
+	@Test
+	public void testMesExtenso() {
+		System.out.println(testeSemana.porExtenso());
 	}
 }

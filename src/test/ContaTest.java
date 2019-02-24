@@ -33,4 +33,8 @@ class ContaTest {
 		withdraw.contaWithdraw(900, "12345"); //Vai dar menos que zero
 		withdraw.contaWithdraw(-100, "12345");		
 	}
+	
+	void contadorTest() {
+		assertEquals(2, withdraw.getContador());	
+	}
 }

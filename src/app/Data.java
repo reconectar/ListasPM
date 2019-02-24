@@ -145,7 +145,7 @@ public class Data {
 		
 		d = this.dia--;		
 		resultado = (a + b + c + d)%7;
-		resultado--;
+		resultado--; //faz o fix de 1 dia errado
 		
 		switch(resultado) {
 		case 0:
@@ -163,10 +163,53 @@ public class Data {
 		case 6:
 			return "Domingo";
 		}
-		return "Erro";
+		return "Só sao aceitas datas positivas entre 1900 e 2399";
 	}
 
 	public boolean eAnoBissexto() {
 		return ( ( ano % 4 == 0 && ano % 100 != 0 ) || ( ano % 400 == 0 ) );
+	}
+	
+	public String porExtenso() {
+		String mesExtenso = null;
+		switch(this.mes) {
+		case 1:
+			mesExtenso = "Janeiro";
+			break;
+		case 2:
+			mesExtenso = "Fevereiro";
+			break;
+		case 3:
+			mesExtenso = "Março";
+			break;
+		case 4:
+			mesExtenso = "Abril";
+			break;
+		case 5:
+			mesExtenso = "Maio";
+			break;
+		case 6:
+			mesExtenso = "Junho";
+			break;
+		case 7:
+			mesExtenso = "Julho";
+			break;
+		case 8:
+			mesExtenso = "Agosto";
+			break;
+		case 9:
+			mesExtenso = "Setembro";
+			break;
+		case 10:
+			mesExtenso = "Outubro";
+			break;
+		case 11:
+			mesExtenso = "Novembro";
+			break;
+		case 12:
+			mesExtenso = "Dezembro";
+			break;
+		}
+		return (this.dia + " de " + mesExtenso + " de " + this.ano);
 	}
 }

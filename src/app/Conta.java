@@ -3,15 +3,18 @@ package app;
 public class Conta {
 	private String numConta;
 	private int saldo;
+	private static int contador = 0;
 	
 	public Conta() {
 		this.numConta = null;
 		this.saldo = 0;
+		contador++;
 	}
 	
 	public Conta(int saldo, String numConta) {
 		this.numConta = numConta;
 		this.saldo = saldo;
+		contador++;
 	}
 	
 	public void contaDeposit(int dinheiros, String numConta) {
@@ -36,5 +39,13 @@ public class Conta {
 
 	public int getSaldo() {
 		return this.saldo;
+	}
+	
+	public int getContador() {
+		return contador;
+	}
+	
+	public String toString() {		
+		return ("Existem no total " + contador + " contas registradas");
 	}
 }
