@@ -18,7 +18,7 @@ public class Conta {
 	}
 	
 	public void contaDeposit(int dinheiros, String numConta) {
-		if(dinheiros>0) {
+		if(dinheiros>=0) {
 			this.saldo += dinheiros;
 		}else {
 			System.out.println("Dinheiros negativo não pode!");
@@ -26,11 +26,18 @@ public class Conta {
 	}
 	
 	public void contaWithdraw(int dinheiros, String numConta) {
-		if((dinheiros>0)&&(this.saldo-dinheiros>0)) {
+		if((dinheiros>=0)&&(this.saldo-dinheiros>=0)) {
 			this.saldo -= dinheiros;
 		}else {
 			System.out.println("Dinheiros negativo não pode!");
 		}
+	}
+	
+	public void transferencia(Conta a, Conta b, int quantidade) {
+		if(a.saldo>=quantidade) {
+			a.contaWithdraw(quantidade, a.numConta);
+			b.contaDeposit(quantidade, b.numConta);	
+		}	
 	}
 	
 	public String getConta() {
