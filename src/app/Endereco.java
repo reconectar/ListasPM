@@ -8,7 +8,7 @@ public class Endereco {
 	protected String cidade;
 	protected String uf;
 	
-	Endereco(String endereco, String telefone, int cep, String cidade, String uf){
+	public Endereco(String endereco, String telefone, int cep, String cidade, String uf){
 		setEndereco(endereco);
 		setTelefone(telefone);
 		setCep(cep);
