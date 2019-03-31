@@ -7,7 +7,8 @@ public class RunPerson {
 	public static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
+// FIX ME fix the test
 //		Person a = new Person();
 //		System.out.println("Nome: " + a.getNome() + "\nidade: " + 
 //							a.getIdade() + "\nsexo: " + a.getSexo() + "\n");
@@ -23,7 +24,7 @@ public class RunPerson {
 //				c.getIdade() + "\nsexo: " + c.getSexo() + "\nMaior?: " +
 //				c.isMaior(c.getIdade()) + "\n");
 		
-		Object a = new Empresa(null, null, null, null, null, null);
+//		Object a = new Empresa(null, null, null, null, null, null);
 		
 	}	
 

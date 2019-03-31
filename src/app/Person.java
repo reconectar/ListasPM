@@ -1,6 +1,6 @@
 package app;
 
-public class Person {
+abstract class Person {
 	
 	protected String nome;
 	protected Endereco endereco;
