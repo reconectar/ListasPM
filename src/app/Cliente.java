@@ -40,9 +40,10 @@ public class Cliente{
 		this.pJ = pJ;
 	}
 	
-	@Override
+	//TODO complete the tostring
+	/*@Override
 	public String toString() {
 		return "";
-	}
+	}*/
 
 }

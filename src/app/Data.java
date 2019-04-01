@@ -153,7 +153,7 @@ public class Data {
 		case 1:
 			return "Terça-feira";
 		case 2:
-			return "Quarta-feira";
+			return "Quarta-0feira";
 		case 3:
 			return "Quinta-feira";
 		case 4:
@@ -170,7 +170,18 @@ public class Data {
 		return ( ( ano % 4 == 0 && ano % 100 != 0 ) || ( ano % 400 == 0 ) );
 	}
 	
-	public String porExtenso() {
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Data) {
+			Data aux = (Data) obj;
+			return (this.ano == aux.ano && this.mes == aux.mes && this.dia == aux.dia); 
+		}
+		return false;
+		
+	}
+	
+	@Override
+	public String toString() {
 		String mesExtenso = null;
 		switch(this.mes) {
 		case 1:

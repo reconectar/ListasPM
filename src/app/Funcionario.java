@@ -27,4 +27,9 @@ public class Funcionario extends PessoaFisica{
 		this.salario = salario;
 	}
 	
+	//TODO complete the tostring
+		/*@Override
+		public String toString() {
+			return "";
+		}*/
 }

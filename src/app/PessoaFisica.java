@@ -1,4 +1,5 @@
 package app;
+import java.util.Scanner;
 
 public class PessoaFisica extends Person {
 	
@@ -13,7 +14,20 @@ public class PessoaFisica extends Person {
 		setIdade(idade);
 		setCpf(cpf);
 	}
+	
+	@Override
+	public void registrar() {
+		Scanner in = new Scanner(System.in);
+		this.sexo = in.nextLine().charAt(0);
+		this.idade = in.nextInt();
+		this.cpf = in.nextLine();		
+		in.close();
+	}
 
+	public boolean isMaior(int idadeRecebida) {
+		return (idadeRecebida>=18);
+	}
+	
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
@@ -36,6 +50,5 @@ public class PessoaFisica extends Person {
 	
 	public void setIdade(int idade) {
 		this.idade = idade;
-	}
-	
+	}	
 }

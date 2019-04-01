@@ -10,13 +10,11 @@ abstract class Person {
 		this.endereco = null;
 	}	
 	
+	public abstract void registrar();
+	
 	public Person (String nome, Endereco endereco){
 		setNome(nome);
 		setEndereco(endereco);
-	}
-	
-	public boolean isMaior(int idadeRecebida) {
-		return (idadeRecebida>=18);
 	}
 
 	public String getNome() {

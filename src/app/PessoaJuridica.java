@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Scanner;
+
 public class PessoaJuridica extends Person{
 	
 	protected String cnpj;
@@ -15,5 +17,12 @@ public class PessoaJuridica extends Person{
 
 	public String getCnpj() {
 		return cnpj;
+	}
+	
+	@Override
+	public void registrar() {
+		Scanner in = new Scanner(System.in);
+		this.cnpj = in.nextLine();		
+		in.close();
 	}
 }
