@@ -7,10 +7,10 @@ import java.util.Scanner;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import app.Cliente;
-import app.Empresa;
-import app.Endereco;
-import app.Funcionario;
+import q1.Cliente;
+import q1.Empresa;
+import q1.Endereco;
+import q1.Funcionario;
 
 class EmpresaTest {
 	

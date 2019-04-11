@@ -1,10 +1,11 @@
 package test;
-import app.Person;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
 import org.junit.jupiter.api.Test;
+
+import q1.Person;
 
 class PersonTest {
 	

@@ -1,4 +1,4 @@
-package app;
+
 import java.util.Scanner;
 
 public class PessoaFisica extends Person {

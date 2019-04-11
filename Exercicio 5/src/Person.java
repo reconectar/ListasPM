@@ -1,5 +1,3 @@
-package app;
-
 abstract class Person {
 	
 	protected String nome;

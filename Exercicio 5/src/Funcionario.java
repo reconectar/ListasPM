@@ -1,4 +1,4 @@
-package app;
+
 
 public class Funcionario extends PessoaFisica{
 	
