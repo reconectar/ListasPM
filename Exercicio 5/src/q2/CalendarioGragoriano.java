@@ -1,5 +1,7 @@
 package q2;
 
+import java.io.IOException;
+
 public class CalendarioGragoriano extends Data{
 	
 	public CalendarioGragoriano() {
@@ -13,25 +15,34 @@ public class CalendarioGragoriano extends Data{
 	}
 	
 	@Override
-	public void setAno(int ano) {
-		this.ano = ano;
+	public void setAno(int ano) throws IOException{
+		if(ano>=1900 && ano<=2399) {
+			this.ano = ano;			
+		}else {
+			throw new IOException();
+		}
+		
 	}
 	
 	@Override
-	public void setMes(int mes) {
+	public void setMes(int mes) throws IOException{
 		if((mes>0)&&(mes<12)) {
 			this.mes = mes;	
+		}else {
+			throw new IOException();
 		}
 	}
 	
 	@Override
-	public void setDia(int dia) {
+	public void setDia(int dia) throws IOException{
 		if(dia>0&&dia<=31) {
 			this.dia = dia;			
+		}else {
+			throw new IOException();
 		}
 	}
 
-	public void proximoDia() {
+	public void proximoDia() throws IOException{
 		if ((this.mes >= 1) && (this.mes <= 12)) {
 			if (this.mes == 1 || this.mes == 3 || this.mes == 5 || this.mes == 7 || this.mes == 8 || this.mes == 10 || this.mes == 12) {
 				if(mes == 12) {
@@ -74,12 +85,13 @@ public class CalendarioGragoriano extends Data{
 					this.dia = 1;
 				}
 			}
-		} else {
-			System.out.println(" Mes invÃ¡lido! ");
+		} else {			
+			//System.out.println(" Mes inválido! ");
+			throw new IOException();
 		}
 	}
 
-	public void adicionaDias(int dias) {
+	public void adicionaDias(int dias) throws IOException {
 		int n;
 		for(n=dias;n>0;n--){
 			this.proximoDia();			
@@ -194,7 +206,7 @@ public class CalendarioGragoriano extends Data{
 			mesExtenso = "Fevereiro";
 			break;
 		case 3:
-			mesExtenso = "MarÃ§o";
+			mesExtenso = "Março";
 			break;
 		case 4:
 			mesExtenso = "Abril";
@@ -230,11 +242,11 @@ public class CalendarioGragoriano extends Data{
 	@Override
 	public boolean menorQue(Ordenavel o) {
 		if(o instanceof CalendarioGragoriano) {
-			if(this.getAno()<((CalendarioGragoriano) o).getAno()) {
+			if(this.getAno()>((CalendarioGragoriano) o).getAno()) {
 				return true;
-			}else if(this.getMes()<((CalendarioGragoriano) o).getMes()){
+			}else if(this.getMes()>((CalendarioGragoriano) o).getMes()){
 				return true;
-			}else if(this.getDia()<((CalendarioGragoriano) o).getDia()){
+			}else if(this.getDia()>((CalendarioGragoriano) o).getDia()){
 				return true;
 			}else {
 				return false;
